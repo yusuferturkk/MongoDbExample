@@ -1,0 +1,38 @@
+﻿@model List<VideoBanner>
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row">
+        <h4>Video Ekle</h4>
+        <hr />
+        <form method="post">
+            @foreach (var item in Model)
+            {
+                <div class="form-group">
+                    <label asp-for="@item.Title1" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.Title1" class="form-control" value="@item.Title1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Title2" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.Title2" class="form-control" value="@item.Title2" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Descripton" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.Descripton" class="form-control" value="@item.Descripton" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.VideoUrl" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.VideoUrl" class="form-control" value="@item.VideoUrl" />
+                </div>
+                <div class="form-group">
+                    <input style="margin-top:10px;" type="submit" value="Değişikliği Kaydet" class="btn btn-primary" />
+                </div>
+            }
+        </form>
+    </div>
+</div>

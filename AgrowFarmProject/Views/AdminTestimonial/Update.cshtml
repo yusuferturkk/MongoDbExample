@@ -1,0 +1,42 @@
+﻿@model List<Testimonial>
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row">
+        <h4>Müşteri Ekle</h4>
+        <hr />
+        <form method="post">
+            @foreach (var item in Model)
+            {
+                <div class="form-group">
+                    <label asp-for="@item.Title1" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.Title1" class="form-control" value="@item.Title1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Title2" class="control-label">Başlık 2</label>
+                    <input asp-for="@item.Title2" class="form-control" value="@item.Title2" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Description" class="control-label">Açıklama</label>
+                    <input asp-for="@item.Description" class="form-control" value="@item.Description" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Name" class="control-label">Ad Soyad</label>
+                    <input asp-for="@item.Name" class="form-control" value="@item.Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.City" class="control-label">Şehir</label>
+                    <input asp-for="@item.City" class="form-control" value="@item.City" />
+                </div>
+                <div class="form-group">
+                    <input style="margin-top:10px;" type="submit" value="Değişikliği Kaydet" class="btn btn-primary" />
+                </div>
+            }
+        </form>
+    </div>
+</div>

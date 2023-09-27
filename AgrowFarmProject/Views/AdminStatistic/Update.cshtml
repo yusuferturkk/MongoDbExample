@@ -1,0 +1,38 @@
+﻿@model List<Statistic>
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row">
+        <h4>İstatistik Ekle</h4>
+        <hr />
+        <form method="post">
+            @foreach (var item in Model)
+            {
+                <div class="form-group">
+                    <label asp-for="@item.Icon" class="control-label">Başlık</label>
+                    <input asp-for="@item.Description" class="form-control" value="@item.Description" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Size" class="control-label">Boyut</label>
+                    <input asp-for="@item.Size" class="form-control" value="@item.Size" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Title" class="control-label">Başlık</label>
+                    <input asp-for="@item.Title" class="form-control" value="@item.Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Description" class="control-label">Açıklama</label>
+                    <input asp-for="@item.Description" class="form-control" value="@item.Description" />
+                </div>
+                <div class="form-group">
+                    <input style="margin-top:10px;" type="submit" value="Değişikliği Kaydet" class="btn btn-primary" />
+                </div>
+            }
+        </form>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@model List<WhyUs>
+
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container">
+    <div class="row">
+        <h4>Neden Biz</h4>
+        <hr />
+        <form method="post">
+            @foreach (var item in Model)
+            {
+                <div class="form-group">
+                    <label asp-for="@item.Title" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.Title" class="form-control" value="@item.Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.Description" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.Description" class="form-control" value="@item.Description" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.ImageUrl" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.ImageUrl" class="form-control" value="@item.ImageUrl" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.CircleTitle1" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.CircleTitle1" class="form-control" value="@item.CircleTitle1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.CirclePercent1" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.CirclePercent1" class="form-control" value="@item.CirclePercent1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.CircleDescription1" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.CircleDescription1" class="form-control" value="@item.CircleDescription1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.CircleTitle2" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.CircleTitle2" class="form-control" value="@item.CircleTitle2" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.CirclePercent2" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.CirclePercent2" class="form-control" value="@item.CirclePercent2" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@item.CircleDescription2" class="control-label">Başlık 1</label>
+                    <input asp-for="@item.CircleDescription2" class="form-control" value="@item.CircleDescription2" />
+                </div>
+                <div class="form-group">
+                    <input style="margin-top:10px;" type="submit" value="Değişikliği Kaydet" class="btn btn-primary" />
+                </div>
+            }
+        </form>
+    </div>
+</div>
